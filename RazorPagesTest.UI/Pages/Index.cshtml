@@ -7,6 +7,7 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <button id="btnThree">Buton 3</button>
 </div>
 
 <div>
@@ -29,6 +30,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             var button = document.getElementById('testBtn');
             var buttonTwo = document.getElementById('testBtnTwo');
+            var buttonThree = document.getElementById('btnThree');
 
             if (button) {
                 button.addEventListener('click', () => {
@@ -42,12 +44,22 @@
                 });
             }
 
+            if (buttonThree) {
+                buttonThree.addEventListener('click', () => {
+                    HandleButtonClickThree();
+                });
+            }
+
             function HandleButtonClick() {
                 alert('Button clicked!');
             }
 
             function HandleButtonClickTwo() {
                 alert('Button two clicked!');
+            }
+
+            function HandleButtonClickThree() {
+                alert('Button three clicked!');
             }
         });
     </script>
