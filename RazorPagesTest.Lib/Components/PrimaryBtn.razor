@@ -1,0 +1,9 @@
+﻿<button id="@btnId" class="@ButtonClass">
+    @ChildContent
+</button>
+
+@code {
+    public string ButtonClass { get; set; } = "btn btn-primary";
+    [Parameter] public string ChildContent { get; set; }
+    [Parameter] public string btnId { get; set; }
+}
